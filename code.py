@@ -25,7 +25,7 @@ for i in range(0, m*n):
 X = np.array(X)
 Y = np.array(Y)
 
-clf = linear_model.SGDClassifier(alpha=0.00001, max_iter=10000).fit(X,Y)
+clf = linear_model.SGDClassifier(alpha=0.001, max_iter=100).fit(X,Y)
 
 Eprime = mpimg.imread(PATH + "Eprime.png", 0)
 Eprime_array = Eprime.reshape(1, m*n)
