@@ -2,7 +2,6 @@ import numpy as np
 from numpy.linalg import *
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-from sklearn import linear_model
 
 PATH = "C:/Users/Mr-Fish/Desktop/Image_and_ImageData/"
 I = mpimg.imread(PATH + "I.png", 0)
