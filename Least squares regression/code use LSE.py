@@ -16,13 +16,12 @@ for i in range(0,m):
     for j in range(0,n):
         X.append([key1[i,j], key2[i,j], I[i,j]])
         Y.append(E[i,j])
-X = np.array(X)
-Y = np.array(Y)
+X = np.array(X, dtype = np.int64)
+Y = np.array(Y, dtype = np.int64)
 
 XX = np.dot(X.T,X)
 XXX = np.dot(inv(XX),X.T)
 w = np.dot(XXX,Y)
-w = w/sum(w)
 
 Eprime = mpimg.imread(PATH + "Eprime.png", 0)
 key1 = np.array(key1); key2 = np.array(key2); Eprime = np.array(Eprime); E = np.array(E);
