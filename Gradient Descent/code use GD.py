@@ -1,5 +1,4 @@
 import numpy as np
-from numpy.linalg import *
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
@@ -34,7 +33,6 @@ while (1):
 Eprime = mpimg.imread(PATH + "Eprime.png", 0)
 key1 = np.array(key1); key2 = np.array(key2); Eprime = np.array(Eprime);
 Image = (1/w[2])*Eprime - (w[0]/w[2])*key1 - (w[1]/w[2])*key2
-
 
 plt.imshow(Image, cmap='Greys_r')
 plt.axis('off')
