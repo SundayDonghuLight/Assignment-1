@@ -34,11 +34,29 @@ key2 = mpimg.imread(PATH + "key2.png", 0)
 X = []
 Y = []
 for i in range(0,m):
-    for j in range(0,n):
-        X.append([key1[i,j], key2[i,j], I[i,j]])
-        Y.append(E[i,j])
+    for j in range(0,n):
+        X.append([key1[i,j], key2[i,j], I[i,j]])
+        Y.append(E[i,j])
 X = np.array(X, dtype = np.int64)
 Y = np.array(Y, dtype = np.int64)
+</pre></code></li>
+<li>
+隨便設定一個權重向量 w 的初值，Eta是影響Gradient Descent每次下降幅度的參數，stop為停止條件(容許誤差)。
+<pre><code>w = [1,1,1]                                         # initial weight vector
+w = np.array(w, dtype = np.float64)
+stop = 0.000000001                                             # stop condition
+Eta = 0.0000000001                                             # adjustment parameter
+</pre></code></li>
+<li>
+Perceptron Learning Algorithm，在變動向量的範數(Norm)小於停止條件前不斷調整 w 權重向量，<p>
+調正方是為減去 L(w) 對 w 的偏微分乘上調整參數 Eta，若切線斜率為正，w 會調小，為負則調大，<p>
+故只要Loss function連續且可微，w 就會不斷趨近能使 L(w) 最小的局部最佳解。
+<p>其微分形式可參考: <a href="https://ccjou.wordpress.com/2013/05/31/%E7%9F%A9%E9%99%A3%E5%B0%8E%E6%95%B8/">矩陣導數</a></p>
+<pre><code>while (1):
+    change = Eta * -2 * np.dot(X.T,Y - np.dot(X,w))
+    w = w - change
+    if (np.dot(change,change) < stop):
+        break
 </pre></code></li>
 </ol>
 
