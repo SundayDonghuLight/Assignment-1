@@ -42,7 +42,7 @@ Y = np.array(Y, dtype = np.int64)
 </pre></code></li>
 <li>
 隨便設定一個權重向量 w 的初值，Eta是影響Gradient Descent每次下降幅度的參數，stop為停止條件(容許誤差)。
-<pre><code>w = [1,1,1]                                         # initial weight vector
+<pre><code>w = [1,1,1]                                                    # initial weight vector
 w = np.array(w, dtype = np.float64)
 stop = 0.000000001                                             # stop condition
 Eta = 0.0000000001                                             # adjustment parameter
@@ -57,6 +57,16 @@ Perceptron Learning Algorithm，在變動向量的範數(Norm)小於停止條件
     w = w - change
     if (np.dot(change,change) < stop):
         break
+</pre></code></li>
+<li>
+將待解碼(預測)的圖片Eprime讀入並使用前面估測出來的 w 權重代入關係式算出原圖 Image 並顯示出來
+<pre><code>Eprime = mpimg.imread(PATH + "Eprime.png", 0)
+key1 = np.array(key1); key2 = np.array(key2); Eprime = np.array(Eprime);
+Image = (1/w[2])*Eprime - (w[0]/w[2])*key1 - (w[1]/w[2])*key2
+
+plt.imshow(Image, cmap='Greys_r')
+plt.axis('off')
+plt.show()
 </pre></code></li>
 </ol>
 
