@@ -19,18 +19,22 @@ for i in range(0,m):
 X = np.array(X, dtype = np.int64)
 Y = np.array(Y, dtype = np.int64)
 
-w = [1,1,1]                                               # initial weight vector
+w = [1,1,1]                                                    # initial weight vector
 w = np.array(w, dtype = np.float64)
 
-stop = 0.00001                                            # stop condition
+stop = 0.000000001                                             # stop condition
 Eta = 0.0000000001                                             # adjustment parameter
 
-for i in range(50):    
-    w = w - Eta * -2 * np.dot(X.T,Y - np.dot(X,w))
-    
+while (1):
+    change = Eta * -2 * np.dot(X.T,Y - np.dot(X,w))
+    w = w - change
+    if (np.dot(change,change) < stop):
+        break
+        
 Eprime = mpimg.imread(PATH + "Eprime.png", 0)
-key1 = np.array(key1); key2 = np.array(key2); Eprime = np.array(Eprime); E = np.array(E);
+key1 = np.array(key1); key2 = np.array(key2); Eprime = np.array(Eprime);
 Image = (1/w[2])*Eprime - (w[0]/w[2])*key1 - (w[1]/w[2])*key2
+
 
 plt.imshow(Image, cmap='Greys_r')
 plt.axis('off')
