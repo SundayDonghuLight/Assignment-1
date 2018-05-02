@@ -1,4 +1,4 @@
-# 機器學習導論-106下 Assignment_01　　　　　　　　　　410411325 林皓翔
+# 機器學習導論-106下 Assignment_01　　　　410411325 林皓翔
 ## Image Decryption by a Single-Layer Neural Network
 
 根目錄下的code.py和圖片解碼ver1.png為一開始嘗試使用sklearn套件SGDClassifier時的失敗成果，等以後更熟悉該套件的arguments和參數調控後再找機會試試<p>
