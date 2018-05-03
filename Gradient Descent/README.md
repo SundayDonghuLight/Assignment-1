@@ -53,7 +53,7 @@ Eta = 0.0000000001                                         �
 </pre></code></li>
 <li>
 Perceptron Learning Algorithm，在變動向量自己的內積小於停止條件前不斷調整 w 權重向量，<p>
-調正方是為減去 L(w) 對 w 的偏微分乘上調整參數 Eta，若切線斜率為正，w 會調小，為負則調大，<p>
+調正方式為減去 L(w) 對 w 的偏微分乘上調整參數 Eta，若切線斜率為正，w 會調小，為負則調大，<p>
 故只要Loss function連續且可微，w 就會不斷趨近能使 L(w) 最小的局部最佳解。
 <p>其微分形式可參考: <a href="https://ccjou.wordpress.com/2013/05/31/%E7%9F%A9%E9%99%A3%E5%B0%8E%E6%95%B8/">矩陣導數</a></p>
 <pre><code>while (1):
