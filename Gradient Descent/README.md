@@ -77,7 +77,7 @@ plt.show()
 
 ### 運行結果
 　　<strong> w = [w1,w2,w3] = [0.24987121, 0.6598644 , 0.09034653] </strong><p>
-    ![Aaron Swartz](https://github.com/SundayDonghuLight/Assignment-1/raw/markdown/Gradient%20Descent/%E5%9C%96%E7%89%87%E8%A7%A3%E7%A2%BC_GD.png)
+    ![Aaron Swartz](https://github.com/SundayDonghuLight/Assignment-1/raw/master/Gradient%20Descent/%E5%9C%96%E7%89%87%E8%A7%A3%E7%A2%BC_GD.png)
 　　  <p>
     
 ### 心得與過程困難
