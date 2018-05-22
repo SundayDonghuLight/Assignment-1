@@ -7,7 +7,7 @@
 若[key1 key2 I][w1 w2 w3]t 所估測出來的 y_hat 與E圖片的灰階差越多則 L(w) 越大<p>
 　　  <p>
 <strong>Learning Algorithm:</strong> Perceptron Learning Algorithm(gradient descent method)<p>
-           <img src="http://chart.googleapis.com/chart?cht=tx&chl=w\left(t\right)=w\left(t-1\right)-\eta\frac{\partial+L\left(w\right)}{\partial+w}"style="border:none;">
+           <img src="http://chart.googleapis.com/chart?cht=tx&chl=w\left(t%2B1\right)=w\left(t\right)-\eta\frac{\partial+L\left(w\right)}{\partial+w}"style="border:none;">
  　　  <p>
       
  ### 程式說明
